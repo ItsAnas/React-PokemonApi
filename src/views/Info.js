@@ -23,6 +23,10 @@ const InfoPage = () => (
                         Craco
                     </li>
                 </ul>
+
+                <p>
+                    The whole project is available on github.
+                </p>
             </div>
         </div>
     </div>
