@@ -1,4 +1,4 @@
-import { Route, Router, Switch } from "react-router";
+import { Route, Switch } from "react-router";
 import RandomPokemonPage from "./views/RandomPokemon";
 import { createBrowserHistory } from "history";
 import Nav from "./components/Navbar";
