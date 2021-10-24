@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Router, Switch } from "react-router";
+import RandomPokemonPage from "./views/RandomPokemon";
+import { createBrowserHistory } from "history";
+import Nav from "./components/Navbar";
+import InfoPage from "./views/Info";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const history = createBrowserHistory();
+
+const App = () => (
+  <Router history={history}>
+    <Nav />
+    <Switch>
+      <Route exact path="/">
+        <RandomPokemonPage />
+      </Route>
+      <Route exact path="/info">
+        <InfoPage />
+      </Route>
+    </Switch>
+  </Router>
+);
 
 export default App;
