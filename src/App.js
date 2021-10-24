@@ -3,11 +3,12 @@ import RandomPokemonPage from "./views/RandomPokemon";
 import { createBrowserHistory } from "history";
 import Nav from "./components/Navbar";
 import InfoPage from "./views/Info";
+import { BrowserRouter } from "react-router-dom";
 
 const history = createBrowserHistory();
 
 const App = () => (
-  <Router history={history}>
+  <BrowserRouter basename="React-PokemonApi" history={history}>
     <Nav />
     <Switch>
       <Route exact path="/">
@@ -17,7 +18,7 @@ const App = () => (
         <InfoPage />
       </Route>
     </Switch>
-  </Router>
+  </BrowserRouter>
 );
 
 export default App;
